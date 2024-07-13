@@ -42,7 +42,6 @@ To run this project locally, follow these steps:
 
 4. Navigate to the server directory:
 
-
 5. Install server dependencies:
 
 
