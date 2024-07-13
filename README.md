@@ -2,6 +2,8 @@
 # ChatMingle
 
 ChatMingle is a real-time chat application built using React.js for the frontend and Node.js, Express.js with Socket.IO for the backend server, allowing users to engage in instant messaging.
+![u1](https://github.com/user-attachments/assets/78d4e86a-d874-4522-87ca-08228a42aead)
+![u2](https://github.com/user-attachments/assets/72b514e1-9544-4761-96ed-844597465a47)
 
 ## Project Structure
 
