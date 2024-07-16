@@ -1,72 +1,116 @@
-# ChatMingle-Chat-Application-
 # ChatMingle
 
-ChatMingle is a real-time chat application built using React.js for the frontend and Node.js, Express.js with Socket.IO for the backend server, allowing users to engage in instant messaging.
+ChatMingle is a real-time chat application designed to facilitate seamless communication between users. It supports multiple users and provides a dynamic and interactive chat experience. The application has been developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack, and it integrates smoothly with both Windows and Ubuntu (Linux) systems.
+![image](https://github.com/user-attachments/assets/7d6dfb77-6d4d-47c0-96cf-cd36e30d35b4)
+![image](https://github.com/user-attachments/assets/567376eb-3c8b-4988-a86c-70bffd88c5a9)
+![mongo](https://github.com/user-attachments/assets/63426f43-1198-48f7-9db7-3d0f98ff8f7e)
 
-![u1](https://github.com/user-attachments/assets/78d4e86a-d874-4522-87ca-08228a42aead)
-![u2](https://github.com/user-attachments/assets/72b514e1-9544-4761-96ed-844597465a47)
-
-## Project Structure
-
-The project is structured into two main folders:
-
-- **frontend**: Contains the React application for the user interface.
-- **server**: Contains the Node.js server implementing Socket.IO for real-time messaging.
 
 ## Features
 
-- **Real-time Messaging**: Instantly send and receive messages.
-- **Multi-User Chat**: Multiple users can login and chat simultaneously.
-- **Responsive Design**: Works seamlessly across devices.
+- **Real-time Messaging:** Users can send and receive messages in real-time.
+- **User Authentication:** Secure login and registration system.
+- **Multiple Chat Rooms:** Users can join different chat rooms and converse simultaneously.
+- **Responsive Design:** Works seamlessly on both desktop and mobile devices.
+- **Persistent Chat History:** Chat history is stored in MongoDB, ensuring that users can access past messages.
+- **Notification System:** Users receive notifications for new messages.
 
 ## Technologies Used
 
-### Frontend
+- **Frontend:** React.js, HTML, CSS, JavaScript
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Real-time Communication:** Socket.io
+- **Version Control:** Git and GitHub
+- **Operating Systems:** Windows, Ubuntu (Linux)
 
-- React.js
-- CSS3
+## Installation Steps
 
-### Backend
+### Windows
 
-- Node.js
-- Express.js
-- Socket.IO
+1. **Install Necessary Software:**
+    ```bash
+    - Node.js and npm: Download and install from [Node.js official website](https://nodejs.org/).
+    - Git: Download and install from [Git official website](https://git-scm.com/).
+    - MongoDB: Download and install from [MongoDB official website](https://www.mongodb.com/try/download/community).
+    ```
 
-## Installation
+2. **Clone the Repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd <your-repo-directory>
+    ```
 
-To run this project locally, follow these steps:
+3. **Install Project Dependencies:**
+    ```bash
+    npm install
+    ```
 
-1. Clone the repository:
-2. Navigate to the frontend directory:
+4. **Configure Environment Variables:**
+    - Create a `.env` file in the root directory.
+    - Add the following environment variables:
+        ```dotenv
+        PORT=3000
+        MONGODB_URI=mongodb://localhost:27017/chatmingle
+        ```
 
-3. Install frontend dependencies:
+5. **Start MongoDB Service:**
+    - Ensure MongoDB is running. Start it using MongoDB Compass or via command line:
+        ```bash
+        mongod
+        ```
 
-4. Navigate to the server directory:
+6. **Run Your Project:**
+    ```bash
+    npm start
+    ```
 
-5. Install server dependencies:
+7. **Check if the Application is Running:**
+    - Open your browser and navigate to `http://localhost:3000`.
 
+### Ubuntu
 
-1. Open a new terminal and navigate to the frontend directory:
+1. **Install Necessary Software:**
+    ```bash
+    sudo apt update
+    sudo apt install nodejs npm -y
+    sudo apt install git -y
+    ```
+    - Follow the official MongoDB installation guide for Ubuntu.
 
-2. Start the frontend server:
+2. **Clone the Repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd <your-repo-directory>
+    ```
 
-3. Open your browser and navigate to:
+3. **Install Project Dependencies:**
+    ```bash
+    npm install
+    ```
 
+4. **Configure Environment Variables:**
+    - Create a `.env` file in the root directory.
+    - Add the following environment variables:
+        ```dotenv
+        PORT=3000
+        MONGODB_URI=mongodb://localhost:27017/chatmingle
+        ```
 
+5. **Start MongoDB Service:**
+    ```bash
+    sudo systemctl start mongod
+    sudo systemctl enable mongod
+    ```
 
-4. Open at least two tabs to simulate a chat room environment.
+6. **Run Your Project:**
+    ```bash
+    npm start
+    ```
 
-### Backend
+7. **Check if the Application is Running:**
+    - Open your browser and navigate to `http://localhost:3000`.
 
-1. Open another terminal and navigate to the server directory:
+## Conclusion
 
-
-2. Start the backend server:
-
-
-## Usage
-
-- Enter your unique username in each tab and start chatting.
-- Messages are displayed in real-time with different styles for your messages and others'.
-
-
+By integrating Ubuntu (Linux) system capabilities, ChatMingle demonstrates cross-platform compatibility and robust real-time communication features. The project showcases your proficiency in using the MERN stack and managing Linux systems, adding significant value to your resume for software development internships.
