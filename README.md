@@ -1,9 +1,19 @@
 # ChatMingle
 
 ChatMingle is a real-time chat application designed to facilitate seamless communication between users. It supports multiple users and provides a dynamic and interactive chat experience. The application has been developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack, and it integrates smoothly with both Windows and Ubuntu (Linux) systems.
+
+Windows:-
+
 ![image](https://github.com/user-attachments/assets/7d6dfb77-6d4d-47c0-96cf-cd36e30d35b4)
 ![image](https://github.com/user-attachments/assets/567376eb-3c8b-4988-a86c-70bffd88c5a9)
 ![mongo](https://github.com/user-attachments/assets/63426f43-1198-48f7-9db7-3d0f98ff8f7e)
+
+Ubuntu(Linux):-
+
+![33](https://github.com/user-attachments/assets/5b4d7704-28f3-4074-bfc3-a3457237b64d)
+![Screenshot from 2024-07-16 16-11-29](https://github.com/user-attachments/assets/28413352-c402-40c0-ab01-dde3f7fb0dd2)
+![Screenshot from 2024-07-16 16-12-05](https://github.com/user-attachments/assets/e50ebb49-573f-48ce-aace-02a32fec49ae)
+
 
 
 ## Features
