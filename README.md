@@ -9,8 +9,7 @@ Windows:-
 ![mongo](https://github.com/user-attachments/assets/63426f43-1198-48f7-9db7-3d0f98ff8f7e)
 
 Ubuntu(Linux):-
-
-![33](https://github.com/user-attachments/assets/5b4d7704-28f3-4074-bfc3-a3457237b64d)
+![33](https://github.com/user-attachments/assets/187bd41f-962e-4888-8386-3cb520869edd)
 ![Screenshot from 2024-07-16 16-11-29](https://github.com/user-attachments/assets/28413352-c402-40c0-ab01-dde3f7fb0dd2)
 ![Screenshot from 2024-07-16 16-12-05](https://github.com/user-attachments/assets/e50ebb49-573f-48ce-aace-02a32fec49ae)
 
