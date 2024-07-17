@@ -3,6 +3,7 @@ const http = require('http');
 const cors = require('cors');
 const socketio = require('socket.io');
 const mongoose = require('mongoose');
+const Filter = require('bad-words'); // Import the bad-words library
 
 const app = express();
 const server = http.createServer(app);
@@ -33,6 +34,8 @@ const chatSchema = new mongoose.Schema({
 
 const Chat = mongoose.model('Chat', chatSchema);
 
+const filter = new Filter(); // Create a new instance of the bad-words filter
+
 // Socket.IO setup
 io.on("connection", (socket) => {
     console.log('New client connected');
@@ -40,17 +43,22 @@ io.on("connection", (socket) => {
     // Receive chat message from client and save to MongoDB
     socket.on("chat", async (data) => {
         const { user, message } = data;
-        const newChatMessage = new Chat({ user, message });
 
-        try {
-            const savedChat = await newChatMessage.save();
-            console.log('Saved new chat message:', savedChat);
-        } catch (error) {
-            console.error('Error saving chat message:', error);
+        if (filter.isProfane(message)) {
+            socket.emit("chat", { user: 'ChatBot', message: 'Your message contains inappropriate language and was not sent.' });
+        } else {
+            const newChatMessage = new Chat({ user, message });
+
+            try {
+                const savedChat = await newChatMessage.save();
+                console.log('Saved new chat message:', savedChat);
+            } catch (error) {
+                console.error('Error saving chat message:', error);
+            }
+
+            // Emit chat message to all clients
+            io.emit("chat", data);
         }
-
-        // Emit chat message to all clients
-        io.emit("chat", data);
     });
 
     socket.on("disconnect", () => {
