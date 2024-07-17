@@ -10,6 +10,11 @@ ChatMingle is a real-time chat application designed to facilitate seamless commu
 ![image](https://github.com/user-attachments/assets/567376eb-3c8b-4988-a86c-70bffd88c5a9)
 ![mongo](https://github.com/user-attachments/assets/63426f43-1198-48f7-9db7-3d0f98ff8f7e)
 
+## ML-Based Offensive Language Filtering
+
+![ml1](https://github.com/user-attachments/assets/7d7edb19-d923-4d57-a96b-8624e4216657)
+![ml2](https://github.com/user-attachments/assets/ab2cd4ef-c428-472a-a5f6-118ee4672b41)
+
 
 ## Ubuntu(Linux):-
 
