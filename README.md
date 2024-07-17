@@ -12,7 +12,7 @@ ChatMingle is a real-time chat application designed to facilitate seamless commu
 
 ## ML-Based Offensive Language Filtering
 
-![ml1](https://github.com/user-attachments/assets/7d7edb19-d923-4d57-a96b-8624e4216657)
+![ml1](https://github.com/user-attachments/assets/1cd05cdb-d7dd-45c5-8c6d-42cad039fd2e)
 ![ml2](https://github.com/user-attachments/assets/ab2cd4ef-c428-472a-a5f6-118ee4672b41)
 
 
