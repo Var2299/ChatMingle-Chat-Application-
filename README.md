@@ -29,7 +29,6 @@ ChatMingle is a real-time chat application designed to facilitate seamless commu
 - **Multiple Chat Rooms:** Users can join different chat rooms and converse simultaneously.
 - **Responsive Design:** Works seamlessly on both desktop and mobile devices.
 - **Persistent Chat History:** Chat history is stored in MongoDB, ensuring that users can access past messages.
-- **Notification System:** Users receive notifications for new messages.
 
 ## Technologies Used
 
@@ -127,6 +126,4 @@ ChatMingle is a real-time chat application designed to facilitate seamless commu
 7. **Check if the Application is Running:**
     - Open your browser and navigate to `http://localhost:3000`.
 
-## Conclusion
 
-By integrating Ubuntu (Linux) system capabilities, ChatMingle demonstrates cross-platform compatibility and robust real-time communication features. The project showcases your proficiency in using the MERN stack and managing Linux systems, adding significant value to your resume for software development internships.
