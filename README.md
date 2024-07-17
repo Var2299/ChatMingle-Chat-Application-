@@ -1,6 +1,6 @@
 # ChatMingle
 
-ChatMingle is a real-time chat application designed to facilitate seamless communication between users. It supports multiple users and provides a dynamic and interactive chat experience. The application has been developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack, and it integrates smoothly with both Windows and Ubuntu (Linux) systems.
+ChatMingle is a real-time chat application designed to facilitate seamless communication between users. It supports multiple users and provides a dynamic and interactive chat experience. The application has been developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack, ensuring robust functionality across both Windows and Ubuntu (Linux) systems.  it integrates a machine learning-based bad-word detection system using Natural Language Processing (NLP) to identify and filter offensive language.
 
 ## Windows:-
 
@@ -29,7 +29,7 @@ ChatMingle is a real-time chat application designed to facilitate seamless commu
 - **Multiple Chat Rooms:** Users can join different chat rooms and converse simultaneously.
 - **Responsive Design:** Works seamlessly on both desktop and mobile devices.
 - **Persistent Chat History:** Chat history is stored in MongoDB, ensuring that users can access past messages.
-
+- **ML-Based Bad Word Detection:** Integrates a machine learning-based NLP system to identify and filter offensive language in real-time chats, enhancing user experience and maintaining a respectful environment.
 ## Technologies Used
 
 - **Frontend:** React.js, HTML, CSS, JavaScript
