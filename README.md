@@ -66,7 +66,12 @@ ChatMingle is a real-time chat application designed to facilitate seamless commu
     npm install
     ```
 
-4. **Configure Environment Variables:**
+4. **Installation of bad-words Library:**
+    ```bash
+    npm install bad-words
+    ```
+   
+5. **Configure Environment Variables:**
     - Create a `.env` file in the root directory.
     - Add the following environment variables:
         ```dotenv
@@ -74,18 +79,18 @@ ChatMingle is a real-time chat application designed to facilitate seamless commu
         MONGODB_URI=mongodb://localhost:27017/chatmingle
         ```
 
-5. **Start MongoDB Service:**
+6. **Start MongoDB Service:**
     - Ensure MongoDB is running. Start it using MongoDB Compass or via command line:
         ```bash
         mongod
         ```
 
-6. **Run Your Project:**
+7. **Run Your Project:**
     ```bash
     npm start
     ```
 
-7. **Check if the Application is Running:**
+8. **Check if the Application is Running:**
     - Open your browser and navigate to `http://localhost:3000`.
 
 ### Ubuntu
