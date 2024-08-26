@@ -3,7 +3,7 @@ import { createServer } from 'http'; // Using named import for createServer
 import cors from 'cors';
 import { Server } from 'socket.io'; // Correcting the import for socket.io to ES module syntax
 import mongoose from 'mongoose';
-import Filter from 'bad-words'; // Importing Filter directly
+import * as Filter from 'bad-words'; // Import all exports as a namespace
 
 const app = express();
 const server = createServer(app);
