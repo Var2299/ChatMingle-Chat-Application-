@@ -3,7 +3,7 @@ const http = require('http');
 const cors = require('cors');
 const socketio = require('socket.io');
 const mongoose = require('mongoose');
-const Filter = require('bad-words'); // Import the bad-words library
+const { default: Filter } = await import('bad-words'); // Dynamic import syntax
 
 const app = express();
 const server = http.createServer(app);
