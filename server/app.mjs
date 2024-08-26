@@ -1,9 +1,11 @@
-const express = require('express');
+import express from 'express';
 const http = require('http');
 const cors = require('cors');
 const socketio = require('socket.io');
 const mongoose = require('mongoose');
-const { default: Filter } = await import('bad-words'); // Dynamic import syntax
+import Filter from 'bad-words'; // Import other ES modules as needed
+
+// Your code
 
 const app = express();
 const server = http.createServer(app);
