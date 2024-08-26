@@ -1,13 +1,13 @@
 import express from 'express';
-import { createServer } from 'http'; // Using named import for createServer
+import { createServer } from 'http';
 import cors from 'cors';
-import { Server } from 'socket.io'; // Correcting the import for socket.io to ES module syntax
+import { Server } from 'socket.io';
 import mongoose from 'mongoose';
-import * as Filter from 'bad-words'; // Import all exports as a namespace
+import Filter from 'bad-words'; // Use default import for bad-words
 
 const app = express();
 const server = createServer(app);
-const io = new Server(server, { // Use new Server instance
+const io = new Server(server, {
     cors: {
         origin: "*"
     }
