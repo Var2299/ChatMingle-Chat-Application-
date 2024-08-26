@@ -3,7 +3,7 @@ const http = require('http');
 const cors = require('cors');
 const socketio = require('socket.io');
 const mongoose = require('mongoose');
-import Filter from 'bad-words'; // Import other ES modules as needed
+import * as Filter from 'bad-words'; // Import all exports as a namespace
 
 // Your code
 
