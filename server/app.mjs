@@ -1,15 +1,13 @@
 import express from 'express';
-const http = require('http');
-const cors = require('cors');
-const socketio = require('socket.io');
-const mongoose = require('mongoose');
-import * as Filter from 'bad-words'; // Import all exports as a namespace
-
-// Your code
+import { createServer } from 'http'; // Using named import for createServer
+import cors from 'cors';
+import { Server } from 'socket.io'; // Correcting the import for socket.io to ES module syntax
+import mongoose from 'mongoose';
+import Filter from 'bad-words'; // Importing Filter directly
 
 const app = express();
-const server = http.createServer(app);
-const io = socketio(server, {
+const server = createServer(app);
+const io = new Server(server, { // Use new Server instance
     cors: {
         origin: "*"
     }
