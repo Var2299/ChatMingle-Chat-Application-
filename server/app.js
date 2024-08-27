@@ -13,7 +13,8 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*"
+        origin: process.env.CORS_ORIGIN || '*', // Use environment variable for allowed origins
+        methods: ['GET', 'POST']
     }
 });
 
@@ -25,7 +26,9 @@ mongoose.connect(mongoUri, {
 });
 
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on('error', (error) => {
+    console.error('MongoDB connection error:', error);
+});
 db.once('open', () => {
     console.log('Connected to MongoDB!');
 });
@@ -55,8 +58,8 @@ io.on("connection", (socket) => {
             const newChatMessage = new Chat({ user, message });
 
             try {
-                const savedChat = await newChatMessage.save();
-                console.log('Saved new chat message:', savedChat);
+                await newChatMessage.save();
+                console.log('Saved new chat message:', { user, message });
             } catch (error) {
                 console.error('Error saving chat message:', error);
             }
@@ -72,10 +75,22 @@ io.on("connection", (socket) => {
 });
 
 // Express middleware setup
-app.use(cors());
+app.use(cors({
+    origin: process.env.CORS_ORIGIN || '*', // Use environment variable for allowed origins
+    methods: ['GET', 'POST']
+}));
 
 // Start server
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
+});
+
+// Global error handling
+process.on('uncaughtException', (err) => {
+    console.error('Uncaught Exception:', err);
+});
+
+process.on('unhandledRejection', (err) => {
+    console.error('Unhandled Rejection:', err);
 });
