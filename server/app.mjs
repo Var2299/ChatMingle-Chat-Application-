@@ -21,12 +21,7 @@ const io = new Server(server, {
 const mongoUri = process.env.MONGODB_URI;
 mongoose.connect(mongoUri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverApi: {
-        version: 1, // Ensures compatibility with the latest MongoDB Server API version
-        strict: true,
-        deprecationErrors: true,
-    }
+    useUnifiedTopology: true
 });
 
 const db = mongoose.connection;
