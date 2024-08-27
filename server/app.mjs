@@ -3,7 +3,7 @@ import { createServer } from 'http';
 import cors from 'cors';
 import { Server } from 'socket.io';
 import mongoose from 'mongoose';
-import Filter from 'bad-words'; // Use default import for bad-words
+import { Filter } from 'bad-words'; // Assuming Filter is a named export
 
 const app = express();
 const server = createServer(app);
