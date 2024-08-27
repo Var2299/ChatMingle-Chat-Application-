@@ -13,16 +13,23 @@ const ChatPage = () => {
   const chatEndRef = useRef(null);
 
   useEffect(() => {
-    const newSocket = SocketIOClient('https://chatmingle-chat-application-bd3.onrender.com');
+    const newSocket = SocketIOClient('https://chatmingle-chat-application-bd3.onrender.com', {
+      transports: ['websocket'], // Ensures WebSocket transport is used
+    });
     setSocket(newSocket);
+
+    newSocket.on('connect_error', (err) => {
+      console.error('Socket connection error:', err);
+    });
+
     newSocket.on('chat', (chatMessage) => {
       setChats((prevChats) => [...prevChats, chatMessage]);
     });
 
     return () => {
-      newSocket.close();
+      newSocket.disconnect(); // Properly disconnect the socket
     };
-  }, [setSocket]);
+  }, []);
 
   useEffect(() => {
     if (chatEndRef.current) {
@@ -62,7 +69,7 @@ const ChatPage = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            <button type='submit'>
+            <button type='submit' disabled={!message.trim()}>
               <FaPaperPlane />
             </button>
           </form>
