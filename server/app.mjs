@@ -6,8 +6,7 @@ import mongoose from 'mongoose';
 import { Filter } from 'bad-words'; // Assuming Filter is a named export
 import dotenv from 'dotenv';
 
-// Load environment variables from .env file
-dotenv.config();
+dotenv.config(); // Load environment variables
 
 const app = express();
 const server = createServer(app);
@@ -18,18 +17,16 @@ const io = new Server(server, {
 });
 
 // MongoDB connection setup
-const mongoURI = process.env.MONGODB_URI; // Use environment variable for MongoDB URI
-
-mongoose.connect(mongoURI, {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
+}).then(() => {
+    console.log('Connected to MongoDB!');
+}).catch(err => {
+    console.error('MongoDB connection error:', err);
 });
 
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-    console.log('Connected to MongoDB!');
-});
 
 // Define MongoDB schema and model
 const chatSchema = new mongoose.Schema({
