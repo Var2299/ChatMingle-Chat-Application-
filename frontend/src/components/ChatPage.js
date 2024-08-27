@@ -13,7 +13,7 @@ const ChatPage = () => {
   const chatEndRef = useRef(null);
 
   useEffect(() => {
-    const newSocket = SocketIOClient('http://localhost:3000');
+    const newSocket = SocketIOClient('https://chatmingle-chat-application-bd3.onrender.com');
     setSocket(newSocket);
     newSocket.on('chat', (chatMessage) => {
       setChats((prevChats) => [...prevChats, chatMessage]);
