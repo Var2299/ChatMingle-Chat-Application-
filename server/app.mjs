@@ -3,10 +3,11 @@ import { createServer } from 'http';
 import cors from 'cors';
 import { Server } from 'socket.io';
 import mongoose from 'mongoose';
-import { Filter } from 'bad-words'; // Assuming Filter is a named export
+import { Filter } from 'bad-words';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Load environment variables
+// Load environment variables from .env file
+dotenv.config();
 
 const app = express();
 const server = createServer(app);
@@ -16,17 +17,23 @@ const io = new Server(server, {
     }
 });
 
-// MongoDB connection setup
-mongoose.connect(process.env.MONGODB_URI, {
+// MongoDB connection setup using Mongoose
+const mongoUri = process.env.MONGODB_URI;
+mongoose.connect(mongoUri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log('Connected to MongoDB!');
-}).catch(err => {
-    console.error('MongoDB connection error:', err);
+    useUnifiedTopology: true,
+    serverApi: {
+        version: 1, // Ensures compatibility with the latest MongoDB Server API version
+        strict: true,
+        deprecationErrors: true,
+    }
 });
 
 const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+    console.log('Connected to MongoDB!');
+});
 
 // Define MongoDB schema and model
 const chatSchema = new mongoose.Schema({
