@@ -44,6 +44,9 @@ ChatMingle is a real-time chat application designed to facilitate seamless commu
 - **Version Control:** Git and GitHub
 - **Operating Systems:** Windows, Ubuntu (Linux)
 
+## Technologies Used
+A live demo of the app is available at [this](https://chatmingle-chat-application-frontend.onrender.com) 
+
 ## Installation Steps
 
 ### Windows
